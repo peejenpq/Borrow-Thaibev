@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Borrow" Class="dbBorrowDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-P8LED4T\SQLEXPRESS;Initial Catalog=Borrow;Integrated Security=True;Encrypt=False;TrustServerCertificate=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BorrowConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Login" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tool" Member="Tool123s">
+    <Type Name="Tool123">
+      <Column Name="CountTool" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDTool" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DateInvoice" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InvoiceNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DeliveryDates" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Unit" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Price1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Price2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CostCenter" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CostCenterName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Location" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ResponsiblePerson" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="RegisterDepartment" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="RegisterSAP" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="RegisterAS400" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EV_Group" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InternalOrder" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DocWithdrawNumber" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DateWithdraw" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FromTranfer" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DocTranfer" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employee" Member="Employee123s">
+    <Type Name="Employee123">
+      <Column Name="CountEmp" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDEmp" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Borrow" Member="Borrows">
+    <Type Name="Borrow">
+      <Column Name="CountBorrow" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateBorrow" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DateReturn" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IDTool" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Detail" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDEmp" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

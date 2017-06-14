@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="BorrowAutomation.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="background-color: #CCCCCC">
+    <form id="form1" runat="server">
+    <div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2">
+    <asp:Image ID="Image1" runat="server" ImageUrl="~/Image/PicCover.jpg" HorizontalAlign="center"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    <asp:ImageButton ID="btnHome" runat="server" Height="80px" ImageUrl="~/Image/HomeButton.png" OnClick="btnHome_Click" Width="80px" />
+                    <asp:ImageButton ID="btnReport" runat="server" Height="80px" ImageUrl="~/Image/ReportButton.png" OnClick="btnReport_Click" />
+                    <asp:ImageButton ID="btnEmployee" runat="server" Height="80px" ImageUrl="~/Image/Employer Button.png" OnClick="btnEmployee_Click" />
+                    <asp:ImageButton ID="btnTools" runat="server" Height="80px" ImageUrl="~/Image/AddtoolsButton.png" OnClick="btnTools_Click" />
+                    <asp:ImageButton ID="btnLogout" runat="server" Height="80px" ImageUrl="~/Image/Logout.png" OnClick="btnLogout_Click" />
+                </td>
+            </tr>
+        </table>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">            
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
